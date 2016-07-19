@@ -1,0 +1,111 @@
+// general elements
+.page {
+  height:$height;
+  width:$width;
+  margin:2rem auto;
+  background:white;
+  overflow:hidden;
+  overflow-x:scroll;
+}
+
+header {
+  background:$primary;
+  color:white;
+  width:$width;
+  position:fixed;
+  z-index: 1;
+}
+
+.ios-bar {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding:0 1rem;
+}
+
+.header-bar {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding: 1rem 2rem;
+  font-size:2rem;
+}
+
+.page-body {
+  height:100%;
+  width:$col-width*3.5;
+  background:$primary-light;
+  padding-top:6.8rem;
+}
+
+.sidebar-toggle {
+  color:white;
+  font-size:2rem;
+  line-height:1rem;
+  padding-right:1rem;
+}
+
+.overlay {
+  position: absolute;
+  background:rgba(0,0,0,0.5);
+  width:$width;
+  height:$height;
+  z-index:0;
+  overflow-x:hidden;
+  display:none;
+}
+
+img {
+  width:100%;
+  max-width:100%;
+}
+
+// card
+.column-card {
+  height:100%;
+  background: $grey-light;
+  .header {
+    padding:1rem;
+    font-size:1.5rem;
+    font-weight:bold;
+    background:$grey-light;
+    border:$grey-border;
+    & > span {
+      font-weight:normal;
+    }
+  }
+  .column-card-body {
+    background:$grey-light;
+    border:$grey-border;
+    border-top:none;
+    height:100%;
+    overflow-y:scroll;
+    li {
+      background: white;
+      border-bottom:$grey-border;
+      padding: 1rem;
+      .meeting-title {
+        font-weight:bold;
+      }
+      .meeting-organisation, .meeting-time, .agenda-time {
+        color:$grey;
+      }
+      .meeting-organisation {
+        margin-bottom: 1rem;
+      }
+      .agenda-title {
+        margin-bottom: .5rem;
+      }
+      table {
+        td:first-of-type {
+          font-weight:bold;
+          color:$grey;
+        }
+        td {
+          padding:1rem;
+          padding-left:0;
+        }
+      }
+    }
+  }
+}

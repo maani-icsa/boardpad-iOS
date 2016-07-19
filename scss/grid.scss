@@ -1,0 +1,48 @@
+.col {
+  height:$height;
+  width:$col-width;
+  padding-left:1rem;
+  padding-right:1rem;
+  float:left;
+  .selected-meeting {
+    font-weight:bold;
+    font-size:1.5rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    &:hover {
+      cursor:pointer;
+    }
+  }
+}
+
+.meetings-col {
+  ul li:hover {
+    background:$grey-light;
+    cursor:pointer;
+  }
+}
+
+.col:first-of-type {
+  padding-left:0;
+  transition:0.3s;
+  z-index:1;
+  position:relative;
+}
+
+.col:last-of-type {
+  width:1.5*$col-width;
+}
+
+.col.off {
+  margin-left:-$col-width;
+}
+
+.col:last-of-type {
+  .column-card {
+    margin-top:4rem;
+    img {
+      border:$grey-border;
+    }
+  }
+}
+
