@@ -1,4 +1,8 @@
 // general elements
+html {
+  background: #333;
+}
+
 .page {
   height:$height;
   width:$width;
@@ -13,36 +17,36 @@ header {
   color:white;
   width:$width;
   position:fixed;
-  z-index: 1;
+  z-index: 2;
 }
 
 .ios-bar {
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  padding:0 1rem;
+  padding:0.5rem 1rem;
 }
 
 .header-bar {
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  padding: 1rem 2rem;
-  font-size:2rem;
+  padding: 1rem;
+  font-size:1.3rem;
+  .organisation-selector i {
+    font-size: 1rem;
+  }
+  .right-buttons i{
+    margin-left: 1rem;
+  }
 }
 
 .page-body {
   height:100%;
   width:$col-width*3.5;
   background:$primary-light;
-  padding-top:6.8rem;
-}
-
-.sidebar-toggle {
-  color:white;
-  font-size:2rem;
-  line-height:1rem;
-  padding-right:1rem;
+  padding-top:5rem;
+  position:relative;
 }
 
 .overlay {
@@ -50,7 +54,7 @@ header {
   background:rgba(0,0,0,0.5);
   width:$width;
   height:$height;
-  z-index:0;
+  z-index:1;
   overflow-x:hidden;
   display:none;
 }
@@ -60,18 +64,84 @@ img {
   max-width:100%;
 }
 
+// columns
+.col {
+  height:$height;
+  width:$col-width;
+  padding-left:1rem;
+  padding-right:1rem;
+  float:left;
+  .selected-meeting {
+    font-weight:400;
+    font-size:1.3rem;
+    position: absolute;
+    margin-top: -2rem;
+    &:hover {
+      cursor:pointer;
+    }
+    .sidebar-toggle {
+      color:white;
+      font-size:1.3rem;
+      line-height:1rem;
+      padding-right:1rem;
+    }
+
+  }
+}
+
+.meetings-col {
+  padding-left:0;
+  transition:0.3s;
+  z-index:1;
+  position:relative;
+  ul li:hover {
+    background:$grey-light;
+    cursor:pointer;
+  }
+}
+
+.col.off {
+  margin-left:-$col-width;
+}
+
+.agenda-col, .details-col {
+  padding-top: 3.5rem; 
+}
+
+.agenda-col {
+  
+}
+
+.details-col {
+  width:1.5*$col-width;
+}
+
+
+
+.col:last-of-type {
+  .column-card {
+    margin-top:4rem;
+    img {
+      border:$grey-border;
+    }
+  }
+}
+
+
+
 // card
 .column-card {
   height:100%;
   background: $grey-light;
   .header {
     padding:1rem;
-    font-size:1.5rem;
-    font-weight:bold;
+    font-size:1.3rem;
+    font-weight:600;
     background:$grey-light;
     border:$grey-border;
     & > span {
       font-weight:normal;
+      font-size: 1rem;
     }
   }
   .column-card-body {
@@ -85,7 +155,8 @@ img {
       border-bottom:$grey-border;
       padding: 1rem;
       .meeting-title {
-        font-weight:bold;
+        font-weight:600;
+        margin-bottom: 0.5rem;
       }
       .meeting-organisation, .meeting-time, .agenda-time {
         color:$grey;
@@ -98,7 +169,7 @@ img {
       }
       table {
         td:first-of-type {
-          font-weight:bold;
+          font-weight:400;
           color:$grey;
         }
         td {
@@ -108,4 +179,32 @@ img {
       }
     }
   }
+}
+
+// bottom tabs
+.bottom-tabs {
+    position: fixed;
+    top: ($height)-42px;
+    width: $width;
+    background: white;
+    border-top: $grey-border;
+    color: $grey-dark;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      max-width: 600px;
+      li {
+        display: inline-block;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+        div {
+          margin-top: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    
 }
