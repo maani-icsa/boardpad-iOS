@@ -2272,6 +2272,14 @@ img {
       .column-card .column-card-body li table td {
         padding: 1rem;
         padding-left: 0; }
+      .column-card .column-card-body li .list-icon {
+        position: absolute;
+        margin-right: 2rem;
+        right: 0;
+        margin-top: -2.5rem;
+        color: #c3cbcf; }
+      .column-card .column-card-body li .unread {
+        color: #3075b5; }
 
 .bottom-tabs {
   position: fixed;

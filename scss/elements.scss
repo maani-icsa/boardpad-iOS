@@ -237,6 +237,16 @@ img {
           padding-left:0;
         }
       }
+      .list-icon {
+        position: absolute;
+        margin-right: 2rem;
+        right: 0;
+        margin-top: -2.5rem;
+        color: $grey;
+      }
+      .unread {
+        color: $primary;
+      }
     }
   }
 }
