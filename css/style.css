@@ -2117,12 +2117,47 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
   font-size: 1.3rem; }
-  .header-bar .organisation-selector i {
-    font-size: 1rem; }
-  .header-bar .right-buttons i {
-    margin-left: 1rem; }
+  .header-bar .organisation-dropdown-toggle {
+    padding: 1rem; }
+  .header-bar .right-buttons {
+    padding-right: 1rem;
+    padding-left: 1rem; }
+    .header-bar .right-buttons i {
+      margin-left: 1rem;
+      padding: 1rem;
+      padding-right: 0; }
+
+.organisation-dropdown {
+  display: none;
+  position: absolute;
+  width: 300px;
+  background: white;
+  color: #5b666e;
+  left: 0;
+  box-shadow: 0 0 1px #c3cbcf; }
+  .organisation-dropdown li {
+    padding: 1rem;
+    box-shadow: 0 1px #c3cbcf; }
+    .organisation-dropdown li:last-of-type {
+      box-shadow: none; }
+
+.settings-dropdown {
+  position: absolute;
+  width: 300px;
+  background: white;
+  color: #5b666e;
+  right: 0;
+  display: none;
+  box-shadow: 0 0 1px #c3cbcf; }
+  .settings-dropdown li {
+    padding: 1rem;
+    box-shadow: 0 1px #c3cbcf; }
+    .settings-dropdown li:last-of-type {
+      box-shadow: none; }
+
+.settings-dropdown-toggle:hover, .organisation-dropdown-toggle:hover {
+  cursor: pointer; }
 
 .page-body {
   height: 100%;
@@ -2177,6 +2212,8 @@ img {
 
 .agenda-col, .details-col {
   padding-top: 3.5rem; }
+  .agenda-col .column-card, .details-col .column-card {
+    max-height: 506.88px; }
 
 .details-col {
   width: 600px; }
@@ -2198,6 +2235,19 @@ img {
     .column-card .header > span {
       font-weight: normal;
       font-size: 1rem; }
+    .column-card .header i {
+      float: right;
+      color: #5b666e;
+      box-shadow: 0 0 0 1px #c3cbcf;
+      padding: 0.5rem 0.5rem;
+      margin-top: -0.5rem;
+      margin-right: -0.5rem;
+      margin-left: 1rem;
+      width: 2.5rem;
+      text-align: center;
+      border-radius: 2px; }
+      .column-card .header i:focus, .column-card .header i:active {
+        background: grey; }
   .column-card .column-card-body {
     background: #f9f9f9;
     border: 1px solid #c3cbcf;
@@ -2226,7 +2276,7 @@ img {
 
 .bottom-tabs {
   position: fixed;
-  top: 726px;
+  top: 728px;
   width: 1024px;
   background: white;
   border-top: 1px solid #c3cbcf;

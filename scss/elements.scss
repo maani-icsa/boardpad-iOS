@@ -12,6 +12,8 @@ html {
   overflow-x:scroll;
 }
 
+// header
+
 header {
   background:$primary;
   color:white;
@@ -31,14 +33,57 @@ header {
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  padding: 1rem;
   font-size:1.3rem;
-  .organisation-selector i {
-    font-size: 1rem;
+  .organisation-dropdown-toggle {
+    padding: 1rem;
   }
-  .right-buttons i{
-    margin-left: 1rem;
+  .right-buttons {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    i{
+      margin-left: 1rem;
+      padding: 1rem;
+      padding-right: 0;
+    }
   }
+}
+
+.organisation-dropdown {
+  display: none;
+  position: absolute;
+  width:300px;
+  background: white;
+  color: $grey-dark;
+  left: 0;
+  box-shadow: 0 0 1px #c3cbcf;
+  li {
+    padding: 1rem;
+    box-shadow: 0 1px #c3cbcf;
+    &:last-of-type {
+      box-shadow: none;
+    }
+  }
+}
+
+.settings-dropdown {
+  position: absolute;
+  width: 300px;
+  background: white;
+  color: $grey-dark;
+  right: 0;
+  display: none;
+  box-shadow: 0 0 1px #c3cbcf;
+  li {
+    padding: 1rem;
+    box-shadow: 0 1px #c3cbcf;
+    &:last-of-type {
+      box-shadow: none;
+    }
+  }
+}
+
+.settings-dropdown-toggle:hover, .organisation-dropdown-toggle:hover {
+  cursor: pointer;
 }
 
 .page-body {
@@ -105,7 +150,10 @@ img {
 }
 
 .agenda-col, .details-col {
-  padding-top: 3.5rem; 
+  padding-top: 3.5rem;
+  .column-card {
+    max-height: $height*0.66;
+  }
 }
 
 .agenda-col {
@@ -115,8 +163,6 @@ img {
 .details-col {
   width:1.5*$col-width;
 }
-
-
 
 .col:last-of-type {
   .column-card {
@@ -142,6 +188,21 @@ img {
     & > span {
       font-weight:normal;
       font-size: 1rem;
+    }
+    i {
+      float: right;
+      color: $grey-dark;
+      box-shadow: 0 0 0 1px $grey;
+      padding: 0.5rem 0.5rem;
+      margin-top: -0.5rem;
+      margin-right: -0.5rem;
+      margin-left: 1rem;
+      width: 2.5rem;
+      text-align: center;
+      border-radius: 2px;
+      &:focus, &:active {
+        background: grey;
+      }
     }
   }
   .column-card-body {
@@ -184,7 +245,7 @@ img {
 // bottom tabs
 .bottom-tabs {
     position: fixed;
-    top: ($height)-42px;
+    top: ($height)-40px;
     width: $width;
     background: white;
     border-top: $grey-border;

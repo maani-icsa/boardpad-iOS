@@ -6,19 +6,35 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/b210ab7880.js"></script>
 </head>
 
 <body>
   <div class="page">
     <header>
       <div class="ios-bar">
-        <span>.... Vodafone</span>
+        <span><i class="fa fa-ellipsis-h"></i> Vodafone</span>
         <div>15:26</div>
-        <div>Battery 22%</div>
+        <div>22% <i class="fa fa-battery-quarter"></i></div>
       </div>
       <div class="header-bar">
-        <span class="organisation-selector">All Organisations <i class="icon-arrow-down"></i></span>
-        <div class="right-buttons"><i class="icon-workflow"></i><i class="icon-customisation"></i></div>
+        <span id="organisation-dropdown-toggle" class="organisation-dropdown-toggle">All Organisations <i class="fa fa-chevron-down"></i></span>
+        <div class="right-buttons"><i class="fa fa-refresh"></i><i id="settings-dropdown-toggle" class="fa fa-ellipsis-v"></i></div>
+      </div>
+      <div id="organisation-dropdown" class="organisation-dropdown">
+        <ul>
+          <li>Organisation 1</li>
+          <li>Organisation 2</li>
+          <li>Organisation 3</li>
+          <li>Organisation 4</li>
+        </ul>
+      </div>
+      <div id="settings-dropdown" class="settings-dropdown">
+        <ul>
+          <li>Item</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
       </div>
     </header>
     <div class="overlay">
@@ -26,7 +42,7 @@
     <div class="page-body">
       <div class="col meetings-col off">
         <div class="column-card">
-          <div class="header">Meetings <span class="count">(18 current, 5 unread)</span></div>
+          <div class="header">Meetings <span class="count">(18 current, 5 unread)</span><i class="fa fa-filter"></i></div>
           <ul class="column-card-body">
             <li>
               <div class="meeting-title">Corporate Banking</div>
@@ -96,7 +112,7 @@
           <span class="sidebar-toggle">☰</span>Board Meeting 21 Jan 2016
         </div>
         <div class="column-card">
-          <div class="header">Agenda <span class="count">(8)</span></div>
+          <div class="header">Agenda <span class="count">(8)</span><i class="fa fa-caret-down"></i><i class="fa fa-download"></i></div>
           <ul class="column-card-body">
             <li>
               <div class="agenda-title">1.Minutes from Previous Meeting</div>
@@ -115,7 +131,7 @@
       </div>
       <div class="col details-col">
         <div class="column-card">
-          <div class="header">Details</div>
+          <div class="header">Details<i class="fa fa-caret-down"></i></div>
           <ul class="column-card-body">
             <li>
               <h4>Board Meeting about pay rises</h4>
@@ -154,12 +170,12 @@
       </div>
       <div class="bottom-tabs">
         <ul>
-          <li><i class="icon-careers"></i><div>Meetings</div></li>
-          <li><i class="icon-compliance"></i><div>Resolutions</div></li>
-          <li><i class="icon-report"></i><div>Reading Rooms</div></li>
-          <li><i class="icon-documentation"></i><div>Documents</div></li>
-          <li><i class="icon-notifications"></i><div>Actions</div></li>
-          <li><i class="icon-market"></i><div>News</div></li>
+          <li><i class="fa fa-users"></i><div>Meetings</div></li>
+          <li><i class="fa fa-check-square-o"></i><div>Resolutions</div></li>
+          <li><i class="fa fa-book"></i><div>Reading Rooms</div></li>
+          <li><i class="fa fa-file-text-o"></i><div>Documents</div></li>
+          <li><i class="fa fa-list-ol"></i><div>Actions</div></li>
+          <li><i class="fa fa-newspaper-o"></i><div>News</div></li>
         </ul>
       </div>
     </div>
