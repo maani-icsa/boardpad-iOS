@@ -53,13 +53,14 @@ header {
   width:300px;
   background: white;
   color: $grey-dark;
-  left: 0;
-  box-shadow: 0 0 1px #c3cbcf;
+  left: 1rem;
+  box-shadow: 0 0 0 1px #c3cbcf;
   li {
     padding: 1rem;
-    box-shadow: 0 1px #c3cbcf;
-    &:last-of-type {
-      box-shadow: none;
+    box-shadow: 0 -1px #c3cbcf;
+    
+    &:hover {
+      background: $grey-light;
     }
   }
 }
@@ -69,14 +70,15 @@ header {
   width: 300px;
   background: white;
   color: $grey-dark;
-  right: 0;
+  right: 1rem;
   display: none;
-  box-shadow: 0 0 1px #c3cbcf;
+  box-shadow: 0 0 0 1px #c3cbcf;
   li {
     padding: 1rem;
-    box-shadow: 0 1px #c3cbcf;
-    &:last-of-type {
-      box-shadow: none;
+    box-shadow: 0 -1px #c3cbcf;
+    
+    &:hover {
+      background: $grey-light;
     }
   }
 }
@@ -263,13 +265,16 @@ img {
       display: flex;
       justify-content: space-around;
       margin: 0 auto;
-      max-width: 600px;
+      max-width: 700px;
       li {
         display: inline-block;
         text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1rem 0.5rem;
         font-size: 1.3rem;
+        width: 10rem;
+        &:hover {
+          background: $grey;
+        }
         div {
           margin-top: 0.5rem;
           font-size: 1rem;
