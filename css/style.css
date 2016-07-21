@@ -2123,7 +2123,6 @@ header {
   .header-bar .right-buttons {
     padding-left: 1rem; }
     .header-bar .right-buttons i {
-      margin-left: 1rem;
       padding: 1rem;
       width: 3rem;
       text-align: center; }
