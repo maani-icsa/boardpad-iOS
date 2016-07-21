@@ -2121,12 +2121,12 @@ header {
   .header-bar .organisation-dropdown-toggle {
     padding: 1rem; }
   .header-bar .right-buttons {
-    padding-right: 1rem;
     padding-left: 1rem; }
     .header-bar .right-buttons i {
       margin-left: 1rem;
       padding: 1rem;
-      padding-right: 0; }
+      width: 3rem;
+      text-align: center; }
 
 .organisation-dropdown {
   display: none;
