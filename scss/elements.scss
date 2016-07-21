@@ -88,7 +88,7 @@ header {
 
 .page-body {
   height:100%;
-  width:$col-width*3.5;
+  width:100%;
   background:$primary-light;
   padding-top:5rem;
   position:relative;
@@ -138,7 +138,7 @@ img {
   padding-left:0;
   transition:0.3s;
   z-index:1;
-  position:relative;
+  position:absolute;
   ul li:hover {
     background:$grey-light;
     cursor:pointer;
