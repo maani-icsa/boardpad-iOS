@@ -59,10 +59,10 @@ header {
   background: white;
   color: $grey-dark;
   left: $width/2-120px;
-  box-shadow: 0 0 0 1px #c3cbcf;
+  box-shadow: 0 0 0 1px $grey;
   li {
     padding: 1rem;
-    box-shadow: 0 -1px #c3cbcf;
+    box-shadow: 0 -1px $grey;
     
     &:hover {
       background: $grey-light;
@@ -77,10 +77,10 @@ header {
   color: $grey-dark;
   right: 1rem;
   display: none;
-  box-shadow: 0 0 0 1px #c3cbcf;
+  box-shadow: 0 0 0 1px $grey;
   li {
     padding: 1rem;
-    box-shadow: 0 -1px #c3cbcf;
+    box-shadow: 0 -1px $grey;
     
     &:hover {
       background: $grey-light;
@@ -94,7 +94,6 @@ header {
 
 .selected-meeting {
   font-weight:400;
-  font-size:1.3rem;
   padding: 1rem;
   background: white;
   color: #333;
@@ -151,7 +150,7 @@ img {
     cursor:pointer;
   }
   .column-card-body li {
-    border: 1px solid #c3cbcf;
+    border: 1px solid $grey;
     margin: 1rem;
   }
 }
@@ -173,6 +172,31 @@ img {
 
 .details-col {
   width:1.5*$col-width;
+  .column-card-body {
+    margin-right: 3.5rem;
+    float: left;
+  }
+  .column-card-tabs {
+    position:absolute;
+    right: 1rem;
+    border-right: 1px solid $grey;
+    height:100%;
+    max-height: ($height*0.66)-48px;
+    li {
+      width: 3.5rem;
+      height: 3.5rem;
+      text-align: center;
+      line-height: 3.5rem;
+      color: $grey-dark;
+      &.active {
+        background: $grey;
+      }
+      &:hover {
+        cursor: pointer;
+        background: $grey;
+      }
+    }
+  }
 }
 
 .col:last-of-type {
@@ -190,6 +214,7 @@ img {
 .column-card {
   height:100%;
   background: $grey-light;
+  overflow: hidden;
   .header {
     padding:1rem;
     font-size:1.3rem;
@@ -245,7 +270,7 @@ img {
           color:$grey;
         }
         td {
-          padding:1rem;
+          padding:0.5rem 1rem;
           padding-left:0;
         }
       }
@@ -282,8 +307,12 @@ img {
         padding: 1rem 0.5rem;
         font-size: 1.3rem;
         width: 10rem;
+        &.active {
+          color:#333;
+        }
         &:hover {
           background: $grey;
+          cursor: pointer;
         }
         div {
           margin-top: 0.5rem;

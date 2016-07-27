@@ -2164,7 +2164,6 @@ header {
 
 .selected-meeting {
   font-weight: 400;
-  font-size: 1.3rem;
   padding: 1rem;
   background: white;
   color: #333; }
@@ -2224,6 +2223,26 @@ img {
 
 .details-col {
   width: 600px; }
+  .details-col .column-card-body {
+    margin-right: 3.5rem;
+    float: left; }
+  .details-col .column-card-tabs {
+    position: absolute;
+    right: 1rem;
+    border-right: 1px solid #c3cbcf;
+    height: 100%;
+    max-height: 458.88px; }
+    .details-col .column-card-tabs li {
+      width: 3.5rem;
+      height: 3.5rem;
+      text-align: center;
+      line-height: 3.5rem;
+      color: #5b666e; }
+      .details-col .column-card-tabs li.active {
+        background: #c3cbcf; }
+      .details-col .column-card-tabs li:hover {
+        cursor: pointer;
+        background: #c3cbcf; }
 
 .col:last-of-type .column-card {
   margin-top: 4rem; }
@@ -2232,7 +2251,8 @@ img {
 
 .column-card {
   height: 100%;
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  overflow: hidden; }
   .column-card .header {
     padding: 1rem;
     font-size: 1.3rem;
@@ -2278,7 +2298,7 @@ img {
         font-weight: 400;
         color: #c3cbcf; }
       .column-card .column-card-body li table td {
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         padding-left: 0; }
       .column-card .column-card-body li .list-icon {
         position: absolute;
@@ -2307,8 +2327,11 @@ img {
       padding: 1rem 0.5rem;
       font-size: 1.3rem;
       width: 10rem; }
+      .bottom-tabs ul li.active {
+        color: #333; }
       .bottom-tabs ul li:hover {
-        background: #c3cbcf; }
+        background: #c3cbcf;
+        cursor: pointer; }
       .bottom-tabs ul li div {
         margin-top: 0.5rem;
         font-size: 1rem; }
