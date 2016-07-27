@@ -2119,7 +2119,11 @@ header {
   justify-content: space-between;
   font-size: 1.3rem; }
   .header-bar .organisation-dropdown-toggle {
-    padding: 1rem; }
+    padding: 1rem;
+    margin-left: 442px; }
+    .header-bar .organisation-dropdown-toggle i {
+      display: block;
+      margin-left: 5rem; }
   .header-bar .right-buttons {
     padding-left: 1rem; }
     .header-bar .right-buttons i {
@@ -2133,7 +2137,7 @@ header {
   width: 300px;
   background: white;
   color: #5b666e;
-  left: 1rem;
+  left: 392px;
   box-shadow: 0 0 0 1px #c3cbcf; }
   .organisation-dropdown li {
     padding: 1rem;
@@ -2158,11 +2162,23 @@ header {
 .settings-dropdown-toggle:hover, .organisation-dropdown-toggle:hover {
   cursor: pointer; }
 
+.selected-meeting {
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding: 1rem;
+  background: white;
+  color: #333; }
+  .selected-meeting:hover {
+    cursor: pointer; }
+  .selected-meeting .sidebar-toggle {
+    line-height: 1rem;
+    padding-right: 1rem; }
+
 .page-body {
   height: 100%;
   width: 100%;
   background: #a4c1dc;
-  padding-top: 5rem;
+  padding-top: 8.5rem;
   position: relative; }
 
 .overlay {
@@ -2184,33 +2200,25 @@ img {
   padding-left: 1rem;
   padding-right: 1rem;
   float: left; }
-  .col .selected-meeting {
-    font-weight: 400;
-    font-size: 1.3rem;
-    position: absolute;
-    margin-top: -2rem; }
-    .col .selected-meeting:hover {
-      cursor: pointer; }
-    .col .selected-meeting .sidebar-toggle {
-      color: white;
-      font-size: 1.3rem;
-      line-height: 1rem;
-      padding-right: 1rem; }
 
 .meetings-col {
   padding-left: 0;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 2;
+  margin-top: -2rem;
   position: absolute; }
   .meetings-col ul li:hover {
     background: #f9f9f9;
     cursor: pointer; }
+  .meetings-col .column-card-body li {
+    border: 1px solid #c3cbcf;
+    margin: 1rem; }
 
 .col.off {
   margin-left: -400px; }
 
 .agenda-col, .details-col {
-  padding-top: 3.5rem; }
+  padding-top: 3rem; }
   .agenda-col .column-card, .details-col .column-card {
     max-height: 506.88px; }
 
