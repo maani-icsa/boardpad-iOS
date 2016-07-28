@@ -6,7 +6,7 @@ html {
 .page {
   height:$height;
   width:$width;
-  margin:2rem auto;
+  // margin:2rem auto;
   background:white;
   overflow:hidden;
   overflow-x:scroll;
@@ -321,4 +321,12 @@ img {
       }
     }
     
+}
+
+.toggle-fullscreen {
+  position: fixed;
+  left: 50%;
+  margin-left: -4.5rem;
+  font-size: 2rem;
+  opacity: 0;
 }

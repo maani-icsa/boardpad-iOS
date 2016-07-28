@@ -2095,7 +2095,6 @@ html {
 .page {
   height: 768px;
   width: 1024px;
-  margin: 2rem auto;
   background: white;
   overflow: hidden;
   overflow-x: scroll; }
@@ -2335,5 +2334,12 @@ img {
       .bottom-tabs ul li div {
         margin-top: 0.5rem;
         font-size: 1rem; }
+
+.toggle-fullscreen {
+  position: fixed;
+  left: 50%;
+  margin-left: -4.5rem;
+  font-size: 2rem;
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */
